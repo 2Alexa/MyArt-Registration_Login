@@ -1,13 +1,16 @@
 package com.myart.registration._login.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.myart.registration._login.web.data.UserRegistrationData;
+
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 
 
 @Entity
 @Table (name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-public class user {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -36,20 +39,23 @@ public class user {
     //primäre Key von User und primäre Key von userdate werden verknüpft, 3 table sind created user, userdate, user_userdate
     @JoinTable(
             name="users_userdates",
-    joinColumns = @JoinColumn(
-            name="user_id",referencedColumnName = "id"))
+            joinColumns = @JoinColumn(
+                    name="user_id",referencedColumnName = "id"))
 
 
     private Collection<userdate> userdates;
 
 
-    public user() {
+    public User(String registrationData) {
         this.id = id;
     }
 
-    public user(String username, String password) {
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public <T> User(String firstname, String lastname, String email, String password, List<T> userdata_user) {
     }
 
 

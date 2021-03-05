@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table (name="userdate")
-public class userdate {
+public class UserData {
 
     //primäreKey
     @Id
@@ -12,9 +12,9 @@ public class userdate {
     private Long id;
     private String name;
 
-    public userdate() {
+    public UserData() {
     }
-    public userdate(String name){
+    public UserData(String name){
         super();
         this.name=name;
     }
@@ -36,3 +36,4 @@ public class userdate {
         this.name = name;
     }
 }
+
