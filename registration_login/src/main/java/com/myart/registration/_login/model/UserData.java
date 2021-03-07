@@ -1,6 +1,7 @@
 package com.myart.registration._login.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 @Entity
 @Table (name="userdate")
@@ -10,6 +11,8 @@ public class UserData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+//darf nicht leer sein, auch keine leerzeichen, am sichersten
+    @NotBlank
     private String name;
 
     public UserData() {
