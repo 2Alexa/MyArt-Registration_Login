@@ -1,7 +1,6 @@
-package com.myart.registration._login.service;
+/*package com.myart.registration._login.service;
 
 import com.myart.registration._login.model.User;
-import com.myart.registration._login.model.UserData;
 import com.myart.registration._login.repository.UserRepository;
 import com.myart.registration._login.web.data.UserRegistrationData;
 
@@ -21,13 +20,14 @@ public class UserServiceImpl implements UserService {
         this.userRepository = userRepository;
     }
 //User Objekt erstellt, Liste mit User Daten wird erstellt, für Datenbank
-    @Override
+  @Override
     public User save(UserRegistrationData registrationData) {
         User user = new User(registrationData.getFirstname(),
                 registrationData.getLastname(),
                 registrationData.getEmail(),
-                registrationData.getPassword(),//Passwort ist ohne Security als Text
-                Arrays.asList(new UserData("USERDATA_USER")));
+                registrationData.getPassword(),
+                //Passwort ist ohne Security als Text
         return userRepository.save(user);
     }
 }
+*/
