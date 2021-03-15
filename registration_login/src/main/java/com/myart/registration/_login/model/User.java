@@ -11,8 +11,9 @@ import java.util.List;
 @Entity
 @Table
 public class User {
+    //primary key
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(unique = true)

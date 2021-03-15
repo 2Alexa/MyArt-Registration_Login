@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="de" xmlns.th="http://www.thymeleaf.org"xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <!--<base href="https://www.linktr.ee/coding_alexa" target="Podcast"> -->
+    <style>
+        body{
+        background-color: #fcf1f1;}
+        .header{
+	height: 720px;
+	background-color:  #fffff;
+	background-size: cover;
+	background-position: 50% 62%;
+}
+.header-navbar-links{
+	color: #000000;
+	float: right;
+	margin-top: 50px;
+	font-size: 16px
+
+}
+.header-navbar-links li{
+	float: left;
+	list-style-type: none;
+	margin-left: 26px;
+
+}
+.header-navbar-links li{
+	float: left;
+	list-style-type: none;
+	margin-left: 26px;
+
+}
+.container{
+	width:900px;
+	margin-top: : 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	padding: 15px;
+	border: 5px solid #ffffff;
+	background-color: #fbe6d4;
+}
+.div{
+float: center;
+	list-style-type: none;
+	margin-left: 26px;
+}
+
+h1{
+	color: black;
+	width: 300%;
+	height: 200%;
+	padding: 10px;
+	}
+
+	p{
+		color: black;
+		line-height: 140%;
+		width: 300%;
+		height: 200%;
+	}
+	.nav{
+		float: right;
+	}
+	.footer{
+	margin: central;
+	position: central;
+
+
+
+    </style>
+    <title>Home</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Podcast_einfach_mal_anders"/>
+    <meta name="keywords" content="Kunst, Art,Music,Galerie"/>
+    <meta name="author" content="Alexandra Thomas"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
+<header class="header">
+    <div class="container" >
+        <div class="header-brand-wrapper">
+            <a class="header-brand" href="index.html"> MyArt  </a>
+        </div>
+        <nav class="header-navbar">
+            <ul class="header-navbar-links">
+                <li> <a th:href="@{/register}">Registriere dich</a> </li>
+                <li> <a th:href="@{/login}">Log dich ein</a></li>
+                <li th:each="tag: ${tags}">
+                    <a th:href="'/tags/' + ${tag.name}">
+                        <span th:text="${tag.name}"></span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <br>
+</header>
+
+<header class="header">
+    <nav>
+        <ul class="header-navbar-links">
+            <li th:each="tag: ${tags}">
+                <a th:href="'/tags/' + ${tag.name}">
+                    <span th:text="${tag.name}"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="container" >
+    <h1></h1>
+    <h2 th:text="${painting.name}"></h2>
+    <img class="img" th:src="${painting.url}" th:alt="${painting.name}">
+</div>
+
+
+
+<footer>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="doc/Datenschutzerklaerung.pdf">Datenschutzerklaerung</a>
+    <p>&copy; Alexandra Thomas </p>
+</footer>
+
+
+</body>
+</html>

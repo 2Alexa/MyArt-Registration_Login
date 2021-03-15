@@ -4,6 +4,7 @@ import com.myart.registration._login.model.LoginDto;
 import com.myart.registration._login.model.User;
 import com.myart.registration._login.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,5 +23,12 @@ public class LoginController {
 
         User user = userRepository.findAllByUsername(username);
         return user;
+    }
+
+    @GetMapping("/register")
+    public String showSignUpForm(Model model){
+        model.addAttribute("user", new User());
+        return "signup_form";
+
     }
 }

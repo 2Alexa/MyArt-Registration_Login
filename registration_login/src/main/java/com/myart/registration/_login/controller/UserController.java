@@ -13,7 +13,7 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
-
+    //
     @PostMapping("/users")
     public User createUser(@RequestBody User user) {
         String username = user.getUsername();
@@ -21,7 +21,7 @@ public class UserController {
         String email = user.getEmail();
         String firstname = user.getFirstname();
         String lastname = user.getLastname();
-
+        //neuer User erstellt
         User newUser = new User(username, password, email, firstname, lastname);
         userRepository.save(newUser);
         return newUser;
