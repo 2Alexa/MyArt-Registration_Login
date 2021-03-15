@@ -6,12 +6,14 @@ import com.myart.registration._login.repository.ArtRepository;
 import com.myart.registration._login.service.ArtService;
 import com.myart.registration._login.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController("/arts")
+
+@Controller("/")
 public class ArtController {
 
     //
@@ -41,7 +43,7 @@ public class ArtController {
         List<Tag> tag = tagService.findFirstTen();
         model.addAttribute("tags", tag);
         model.addAttribute("art", randomArt);
-        return "index";
+        return "Home";
     }
 
 }

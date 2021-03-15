@@ -5,15 +5,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 
+//
 public interface ArtRepository extends CrudRepository<Art,Long> {
-    //
+    //find und gib erste ergebnis von db , wo eigenschaft id < /= ist, um zufall bild bekommen
      Art findFirstByIdGreaterThanEqual(Long id);
-    //
-     Art findFirstByTagNameIgnoreCase(String tag);
+     //konzept seite , wie viel elemente pro seite dürfen sein, ein ergebnis oder keins
+     Page<Art> findByTagsNameIgnoreCase(String tag, Pageable page);
      //
-     Page<Art>findByTagNameIgnoreCase(String tag, Pageable page);
-     //
-     long countByTagNameIgnoreCase(String tag);
+     long countByTagsNameIgnoreCase(String tag);
 
 
 }

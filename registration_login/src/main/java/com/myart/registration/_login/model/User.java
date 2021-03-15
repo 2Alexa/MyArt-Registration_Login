@@ -1,12 +1,7 @@
 package com.myart.registration._login.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.myart.registration._login.web.data.UserRegistrationData;
 
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.List;
-
 
 @Entity
 @Table

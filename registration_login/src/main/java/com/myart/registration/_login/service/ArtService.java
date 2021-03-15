@@ -28,13 +28,13 @@ public class ArtService {
     //
     public Art findRandomByTag (String tag){
         //
-        long total = repository.countByTagNameIgnoreCase(tag);
+        long total = repository.countByTagsNameIgnoreCase(tag);
         //
         long random = (long) (Math.random() * total);
         //
         PageRequest oneItemPerPageRequest = PageRequest.of((int) random, 1);
         //
-        Page<Art> page =repository.findByTagNameIgnoreCase(tag, oneItemPerPageRequest);
+        Page<Art> page =repository.findByTagsNameIgnoreCase(tag, oneItemPerPageRequest);
         //
         return page.get().findFirst().orElse(null);
     }

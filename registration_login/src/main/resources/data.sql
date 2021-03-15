@@ -1,4 +1,5 @@
-INSERT INTO paintings (id, url, name) VALUES
+# db anlegen
+INSERT INTO arts (id, url, name) VALUES
 (1, '/sternennacht.jpeg', 'Sternennacht'),
 (2, '/selbstbild.jpg', 'Selbstbild'),
 (3, 'https://upload.wikimedia.org/wikipedia/commons/e/e0/VanGogh-Irises_2.jpg', 'Irises'),
@@ -12,7 +13,7 @@ INSERT INTO tags (id, name) VALUES
 (2, 'düster'),
 (3, 'positiv');
 
-INSERT INTO paintings_tags (painting_id, tag_id) VALUES
+INSERT INTO arts_tags (art_id, tag_id) VALUES
 (1, 2),
 (2, 2),
 (3, 1),
