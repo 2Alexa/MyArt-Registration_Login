@@ -1,4 +1,3 @@
-# db anlegen
 INSERT INTO arts (id, url, name) VALUES
 (1, '/sternennacht.jpeg', 'Sternennacht'),
 (2, '/selbstbild.jpg', 'Selbstbild'),

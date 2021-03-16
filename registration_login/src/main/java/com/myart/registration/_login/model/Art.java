@@ -21,7 +21,7 @@ public class Art {
 
     @ManyToMany
     @JoinTable(
-            name="art_tags",
+            name="arts_tags",
             joinColumns = @JoinColumn(name="art_id"),
             inverseJoinColumns = @JoinColumn(name ="tag_id")
     )
