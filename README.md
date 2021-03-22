@@ -3,10 +3,6 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<p align="center">
-  <a href="https://github.com/2Alexa/MyArt-Registration_Login">
-    <img src="https://de.wikipedia.org/wiki/Ilja_Jefimowitsch_Repin#/media/Datei:Bridge_in_Abramtsevo_by_Repin.jpg" alt="Logo" width="80" height="80">
-  </a>
 
   <h3 align="center">My Art Projekt</h3>
 
