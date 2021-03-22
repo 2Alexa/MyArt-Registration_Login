@@ -15,12 +15,6 @@
     <br />
     <a href="https://github.com/github_2Alexa/MyArt-Registration_Login"><strong>Erkunde die Dokumentation»</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/github_MyArt-Registration_Login">View Demo</a>
-    ·
-    <a href="https://github.com/github_MyArt-Registration_Login">Report Bug</a>
-    ·
-    <a href="https://github.com/github_MyArt-Registration_Login">Request Feature</a>
   </p>
 </p>
 
@@ -72,7 +66,7 @@ bestehend aus eine Bild und Sound auf der Webseite anzeigen zu lassen.
 
 ### Aufbau des Codes
 
-User Daten anlegen und User einloggen:
+#### User Daten anlegen und User einloggen:
 
 Wir legen eine Model User und UserDto an, die beinhalten die angewendete Daten des Users. Die Repository dient ein Schnittstelle, 
 die verweist mit welche Daten gearbeitet wird. Über den Controller, bei dem User wenden wir den RestController an und nutzen PostMapping,
@@ -84,12 +78,12 @@ Post / http://localhost:8080/users
 content-type = application/json
 
 
-Kunstbilder:
+#### Kunstbilder:
 
 Wir legen 4 Model für Art, Tag, ArtDto und TagDto. Im weiterem für beide ein Repository an. 
 Es handelt sich bei dem ArtController, um eine Annotation Controller, hier wenden wir kein Annotation RestController, zu jetzigem Stand an. 
 
-Datenbank:
+#### Datenbank:
 Das Objekt "Art" besteh aus einer URL-Adresse und Namen. Das Objekt "Tag" besteht aus einem Namen. Beide Objekte besitzen eine ID. 
 Für beide Objekte besteht eine Annotation Entity( verbunden mit Tabelle in Datenbank). Es besteht eine m:n Beziehung. 
 Diese Beziehung ist über ManyToMany deklariert.
@@ -102,7 +96,7 @@ Dadurch können beliebig Bilder eingefügen werden, die Annotation der Bilder mi
 (siehe den Link in Referenzen zur  weiteren Erklärung)
 JPA stellt die Anfrage zur Datenbank auf.
 
-Webseite:
+#### Webseite:
 
 Die Webseite ist durch ArtController und Thymeleaf aufgebaut. Wir liefern den Wert "Home" zurück, dies bedeutet dass die Webseite home.html aus dem templates aufgebaut wird. 
 Die Datei home.html muss unter src/main/resources/templates/ zufinden sein. 
@@ -139,15 +133,13 @@ Ich hab standartmässig sa und password behalten.
 
 Um die lokal abgelgten Daten auf h2 Datenbank zu sehen, verwende die Adresse http://localhost:8080/h2-console in deinem Browser.
 
-## Nutzung der Projekts
-
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Instagram:
+
 Project Link: [https://github.com/2Alexa/MyArt-Registration_Login](https://github.com/2Alexa/MyArt-Registration_Login)
 
 
