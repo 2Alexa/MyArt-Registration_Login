@@ -2,6 +2,7 @@ package com.myart.registration._login.controller;
 
 import com.myart.registration._login.model.Art;
 import com.myart.registration._login.model.Tag;
+import com.myart.registration._login.repository.ArtRepository;
 import com.myart.registration._login.service.ArtService;
 import com.myart.registration._login.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,8 @@ public class ArtController {
         Art randomArt = artService.findRandomByTag(tag);
         return getImage(model, randomArt);
     }
+
+
 
     // methode getImage, Liste mit tags erstellt, zufälliges kunstwerk mit einem tag
     private String getImage(Model model, Art randomArt) {

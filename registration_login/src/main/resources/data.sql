@@ -1,12 +1,20 @@
 INSERT INTO arts (id, url, name) VALUES
-(1, '/sternennacht.jpeg', 'Sternennacht'),
+(1, 'https://de.wikipedia.org/wiki/Ilja_Jefimowitsch_Repin#/media/Datei:Ilya_Repin_-_Sadko_-_Google_Art_Project.jpg', 'Sadko'),
 (2, '/selbstbild.jpg', 'Selbstbild'),
 (3, 'https://upload.wikimedia.org/wikipedia/commons/e/e0/VanGogh-Irises_2.jpg', 'Irises'),
 (4, 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Vincent_Van_Gogh_0010.jpg/800px-Vincent_Van_Gogh_0010.jpg', 'Sonnenblumen'),
 (5, 'https://upload.wikimedia.org/wikipedia/commons/6/60/Vincent_van_Gogh_-_Field_with_Poppies_%281889%29.jpg', 'Field with Poppies'),
 (6, 'https://upload.wikimedia.org/wikipedia/commons/d/db/The_Potato_Eaters_-_Lithography_by_Vincent_van_Gogh.jpg', 'The potato eaters'),
 (7, 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Starry_Night_Over_the_Rhone.jpg/1024px-Starry_Night_Over_the_Rhone.jpg', 'Stary night over Rhone'),
-(8, 'https://upload.wikimedia.org/wikipedia/commons/8/83/Picasso%2C_Jacob_Chayat.jpg' , 'Jacob Chayad');
+(8, 'https://upload.wikimedia.org/wikipedia/commons/8/83/Picasso%2C_Jacob_Chayat.jpg' , 'Jacob Chayad'),
+(9, 'https://commons.wikimedia.org/wiki/File:Arshile_Gorky,_The_Artist_and_His_Mother.jpg', 'The_Artist_and_his_Mother'),
+(10, 'https://de.wikipedia.org/wiki/Datei:Claude_Monet_-_Meules_(W_1273).jpg' , 'Meules'),
+(11, 'https://de.wikipedia.org/wiki/Claude_Monet#/media/Datei:Claude_Monet_-_Water_Lilies_-_1906,_Ryerson.jpg', 'Water_Lilies'),
+(12, 'https://de.wikipedia.org/wiki/Claude_Monet#/media/Datei:Claude_Monet_-_Palazzo_da_Mula_in_Venice_1908.jpg', 'Palazzo da Mula'),
+(13, 'https://de.wikipedia.org/wiki/Iwan_Iwanowitsch_Schischkin#/media/Datei:Utro_v_sosnovom_lesu.jpg', 'Morgen im Kiefernwald'),
+(14, 'https://de.wikipedia.org/wiki/Iwan_Iwanowitsch_Schischkin#/media/Datei:1889_Shishkin_Felsige_Landschaft_anagoria.JPG', 'Die felsige Landschaft'),
+(15, 'https://de.wikipedia.org/wiki/Ilja_Jefimowitsch_Repin#/media/Datei:Ilia_Efimovich_Repin_(1844-1930)_-_Volga_Boatmen_(1870-1873).jpg','Die Wolgatreibler'),
+(16, 'https://de.wikipedia.org/wiki/Ilja_Jefimowitsch_Repin#/media/Datei:Bridge_in_Abramtsevo_by_Repin.jpg','Sommerlandscahft');
 
 INSERT INTO tags (id, name) VALUES
 (1, 'fröhlich'),
@@ -24,4 +32,15 @@ INSERT INTO arts_tags (art_id, tag_id) VALUES
 (7, 2),
 (7, 3),
 (8, 3),
-(8, 1);
+(8, 1),
+(9, 3),
+(10,1),
+(10,3),
+(11,1),
+(11,3),
+(12,2),
+(13,1),
+(13,3),
+(14,2),
+(15,2),
+(16,3);
